@@ -58,4 +58,8 @@ abstract class DocumentReference {
   ///
   /// If no document exists yet, the update will fail.
   Future<void> update({Map<String, dynamic> data});
+
+  /// Returns the reference of a collection contained inside of this
+  /// document.
+  CollectionReference collection(String collectionPath);
 }

@@ -35,7 +35,7 @@ class DocumentReference implements intf.DocumentReference {
       _documentReference.updateData(data);
   /// Returns the reference of a collection contained inside of this
   /// document.
-  mobile.CollectionReference collection(String collectionPath) {
-    return _documentReference.collection(collectionPath);
+  CollectionReference collection(String collectionPath) {
+    return CollectionReference(_documentReference.collection(collectionPath));
   }
 }

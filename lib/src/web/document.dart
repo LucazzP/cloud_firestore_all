@@ -31,4 +31,7 @@ class DocumentReference implements intf.DocumentReference {
   Future<void> set(Map<String, dynamic> data) => _documentReference.set(data);
   Future<void> update({Map<String, dynamic> data}) =>
       _documentReference.update(data: data);
+  CollectionReference collection(String collectionPath) {
+    return CollectionReference(_documentReference.collection(collectionPath));
+  }
 }
